@@ -62,6 +62,7 @@ When('I compare items in the cart and items in the cart icon', async function co
 });
 
 When('I validate the bottom of home page', async (dataTable) => {
+    await sbitanyPage.cartIconClick();
     const table = dataTable.hashes();
     for (let items of table) {
         await sbitanyPage.homePageValidation(items.name);
