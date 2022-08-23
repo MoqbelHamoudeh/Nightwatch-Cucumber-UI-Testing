@@ -59,7 +59,6 @@ When('I compare items in the cart and items in the cart icon', async function co
         await sbitanyPage.compareItems(itemsInTheCartTable[i], itemsInTheCartIcon[i]);
         //for loop to compare two object from two arrays
     }
-    await sbitanyPage.compareItems(itemsInTheCartTable, itemsInTheCartIcon);
 });
 
 When('I validate the bottom of home page', async (dataTable) => {
