@@ -46,7 +46,7 @@ const sbitanyCommands = {
         await client.useXpath().waitForElementVisible(this.props.itemInTheCartIconTable(name), 6000);
         },
     async homePageValidation(name) {
-        // await client.useXpath().click(this.elements.sbitanyIcon.selector);
+
         await client.useXpath().waitForElementVisible(this.props.itemInHomePage(name), 6000);
 
     },
