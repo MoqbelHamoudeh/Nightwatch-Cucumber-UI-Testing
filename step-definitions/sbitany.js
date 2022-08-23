@@ -13,25 +13,21 @@ When('i login to sbitany with this account details', async (dataTable) => {
     const table = dataTable.hashes()[0];
     await sbitanyPage.loginToSbitany(table.email, table.password);
 });
-When('I validate that the cart exists', async () => {
+Then('I validate that the cart exists', async () => {
     await sbitanyPage.cartExists();
 });
 When('I validate account login', async () => {
     await sbitanyPage.loginValidation();
-
 });
 When('I validate language change', async () => {
     await sbitanyPage.languageChange();
 });
-
 When('I search of an item and add it to the cart {string}', async (text) => {
     await sbitanyPage.itemSearch(text);
 });
-When('I validate the item added in the cart', async () => {
+Then('I validate the item added in the cart', async () => {
     await sbitanyPage.cartItems();
 });
-
-
 When('I validate that these items are existed in the cart', async function validateItems(dataTable) {
     const table = dataTable.hashes();
     this.itemsInTheCartTable = [];
@@ -39,7 +35,6 @@ When('I validate that these items are existed in the cart', async function valid
     for (let item of table) {
         await sbitanyPage.cartValidation(item.name, item.model, item.price);
         items.push(item);
-
     }
 });
 When('I validate the items in the cart icon', async function validateItems(dataTable) {
@@ -60,7 +55,6 @@ When('I compare items in the cart and items in the cart icon', async function co
         //for loop to compare two object from two arrays
     }
 });
-
 When('I validate the bottom of home page', async (dataTable) => {
     await sbitanyPage.cartIconClick();
     const table = dataTable.hashes();

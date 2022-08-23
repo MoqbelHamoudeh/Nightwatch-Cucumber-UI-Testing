@@ -44,13 +44,14 @@ const sbitanyCommands = {
     async itemInCartIconValidation(name) {
         await client.useXpath().click(this.elements.cartIcon.selector);
         await client.useXpath().waitForElementVisible(this.props.itemInTheCartIconTable(name), 6000);
-        },
+    },
     async homePageValidation(name) {
 
         await client.useXpath().waitForElementVisible(this.props.itemInHomePage(name), 6000);
+        await client.useXpath().waitForElementVisible(this.props.itemInHomePage(name), 6000);
 
     },
-    async cartIconClick(){
+    async cartIconClick() {
         await client.useXpath().click(this.elements.sbitanyIcon.selector);
 
     },
